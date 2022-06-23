@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import NavigationItems from "./NavigationItems";
 import { ReactComponent as Ico3 } from "../img/3.svg";
+import { ReactComponent as Logo } from "../img/logo.svg";
+import styled from "styled-components";
 
 export default function Navigation() {
   const pages = [
@@ -22,13 +24,14 @@ export default function Navigation() {
     },
   ];
   return (
-    <header>
-      <Link to="/">
-        <div></div>
-      </Link>
-
-      <img src="logo.svg" alt="Code du travail numérique" />
-      <NavigationItems />
-    </header>
+    <WrapperNavigation>
+      <div>
+        <Link to="/">
+          <Ico3 />
+        </Link>
+        <Logo />
+      </div>
+    </WrapperNavigation>
   );
 }
+const WrapperNavigation = styled.header``;

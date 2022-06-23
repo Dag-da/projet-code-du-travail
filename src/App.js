@@ -8,18 +8,15 @@ import Toolbox from "./pages/Toolbox";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Navigation />
-
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/theme" element={<Theme />} />
-          <Route path="/toolbox" element={<Toolbox />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Router>
-    </>
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/theme" element={<Theme />} />
+        <Route path="/toolbox" element={<Toolbox />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </Router>
   );
 }
 
