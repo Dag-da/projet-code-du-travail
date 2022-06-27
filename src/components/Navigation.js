@@ -1,9 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import NavigationItems from "./NavigationItems";
-import { ReactComponent as Ico3 } from "../img/3.svg";
-import { ReactComponent as Logo } from "../img/logo.svg";
 import styled from "styled-components";
+// import { render } from "@testing-library/react";
 
 export default function Navigation() {
   const pages = [
@@ -23,15 +22,34 @@ export default function Navigation() {
       id: 3,
     },
   ];
+
   return (
     <WrapperNavigation>
       <div>
-        <Link to="/">
-          <Ico3 />
-        </Link>
-        <Logo />
+        <img src="3.svg" alt="République française" />
       </div>
+      <div>
+        <img src="logo.svg" alt="Code du travail numérique" />
+      </div>
+      {/* <Toggle /> */}
+      <img src="bars-solid.svg" alt="menu" />
+      <ul>
+        {pages.map((page) => (
+          <NavigationItems slug={page.slug} key={page.id} page={page.item} />
+        ))}
+      </ul>
     </WrapperNavigation>
   );
 }
-const WrapperNavigation = styled.header``;
+const WrapperNavigation = styled.header`
+  display: flex;
+  justify-content: space-between;
+  height: 5em;
+  div {
+    height: 100%;
+    margin: 0 1rem;
+  }
+  div img {
+    height: 100%;
+  }
+`;
