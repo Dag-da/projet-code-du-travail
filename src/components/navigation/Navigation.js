@@ -1,7 +1,8 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-import NavigationItems from "./NavigationItems";
+import NavItems from "./NavItems";
 import styled from "styled-components";
+import Search from "../SearchBox";
 // import { render } from "@testing-library/react";
 
 export default function Navigation() {
@@ -27,15 +28,13 @@ export default function Navigation() {
     <WrapperNavigation>
       <div>
         <img src="3.svg" alt="République française" />
-      </div>
-      <div>
         <img src="logo.svg" alt="Code du travail numérique" />
       </div>
-      {/* <Toggle /> */}
+      <Search />
       <img src="bars-solid.svg" alt="menu" />
       <ul>
         {pages.map((page) => (
-          <NavigationItems slug={page.slug} key={page.id} page={page.item} />
+          <NavItems slug={page.slug} key={page.id} page={page.item} />
         ))}
       </ul>
     </WrapperNavigation>
