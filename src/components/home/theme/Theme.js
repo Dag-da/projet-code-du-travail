@@ -1,5 +1,4 @@
 import React from "react";
-import FeaturedCard from "../featured/FeaturedCard";
 
 export default function Theme() {
   const themes = [

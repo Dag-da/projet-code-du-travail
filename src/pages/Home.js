@@ -17,4 +17,8 @@ export default function Home() {
     </HomePage>
   );
 }
-const HomePage = styled.main``;
+const HomePage = styled.main`
+  font-family: "Merriweather", serif;
+  color: #3e486e;
+  background: linear-gradient(#d0defd, #fff 7%);
+`;
